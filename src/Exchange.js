@@ -63,7 +63,7 @@ handleFormSubmit(e){
     }
   }).then(response => {
     console.log(response);
-    this.setState({secondValue:response.data})
+    this.setState({secondValue:response.data.toFixed(2)})
   
   })
 
@@ -102,6 +102,9 @@ handleFormSubmit(e){
             value={baseValue}
             />
           </Col>
+          <h2 className="Equals">
+          &nbsp; = &nbsp;
+          </h2>
           <Col>
           {
             options ? 
